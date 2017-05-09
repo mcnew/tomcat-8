@@ -4,5 +4,5 @@
 > java.util.logging.ConsoleHandler.level = FINEST
 70a71,73
 >
-> #####
+> ########
 > net.sf.razzek.level = FINEST
