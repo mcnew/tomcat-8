@@ -12,5 +12,5 @@ RUN SLF4J_VER=1.7.25 \
  && apt-get -qq update \
  && apt-get -qq -y install patch \
  && patch $CATALINA_HOME/conf/logging.properties /tmp/logging.patch \
- && echo "687061e9b5676821783d35fe222023be  $CATALINA_HOME/conf/logging.properties" | md5sum -c \
+ && echo "10659a960a76528a6896d96bd9bd9887  $CATALINA_HOME/conf/logging.properties" | md5sum -c \
  && rm -rf $CATALINA_HOME/webapps/ROOT
