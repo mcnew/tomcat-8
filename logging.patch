@@ -2,7 +2,6 @@
 < java.util.logging.ConsoleHandler.level = FINE
 ---
 > java.util.logging.ConsoleHandler.level = FINEST
-70a71,73
->
+70a71,72
 > ########
 > net.sf.razzek.level = FINEST
