@@ -1,4 +1,4 @@
-FROM tomcat:8.0-jre8
+FROM tomcat:8.0.53-jre8
 
 RUN LOG4J_VER=1.2.17 \
  && curl -SLfs https://repo1.maven.org/maven2/log4j/log4j/${LOG4J_VER}/log4j-${LOG4J_VER}.jar > $CATALINA_HOME/lib/log4j-${LOG4J_VER}.jar \
@@ -12,9 +12,9 @@ RUN SLF4J_VER=1.7.25 \
  && echo "7f16ba3b1ab6a781c3f6887eae7b608d  $CATALINA_HOME/lib/slf4j-log4j12-${SLF4J_VER}.jar" | md5sum -c
 
 RUN curl -SLfs http://www-eu.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/extras/tomcat-juli-adapters.jar > $CATALINA_HOME/lib/tomcat-juli-adapters.jar \
- && echo "57e3435ae1e0c3a3a1c7b75ee62a0b8b  $CATALINA_HOME/lib/tomcat-juli-adapters.jar" | md5sum -c \
+ && echo "ee37ad418d21e05f0f347f53f333eab3  $CATALINA_HOME/lib/tomcat-juli-adapters.jar" | md5sum -c \
  && curl -SLfs http://www-eu.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/extras/tomcat-juli.jar > $CATALINA_HOME/bin/tomcat-juli.jar \
- && echo "842ec97d998202d1d8a05e492ca55578  $CATALINA_HOME/bin/tomcat-juli.jar" | md5sum -c
+ && echo "6565e32949bba5eaa28670af7110cce9  $CATALINA_HOME/bin/tomcat-juli.jar" | md5sum -c
 
 RUN curl -SLfs https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.12/mysql-connector-java-8.0.12.jar > $CATALINA_HOME/lib/mysql-connector-java-8.0.12.jar \
  && echo "88766727e5e434ceb94315b0dae0e4b4  $CATALINA_HOME/lib/mysql-connector-java-8.0.12.jar" | md5sum -c
