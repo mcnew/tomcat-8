@@ -16,7 +16,7 @@ RUN curl -SLfs http://www-eu.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/
  && curl -SLfs http://www-eu.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/extras/tomcat-juli.jar > $CATALINA_HOME/bin/tomcat-juli.jar \
  && echo "842ec97d998202d1d8a05e492ca55578  $CATALINA_HOME/bin/tomcat-juli.jar" | md5sum -c
 
-RUN curl -SLfs https://repo1.maven.org/maven2/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar > $CATALINA_HOME/lib/mysql-connector-java-6.0.6.jar \
- && echo "2420a107fd55bd46541844a0f43d4cdf  $CATALINA_HOME/lib/mysql-connector-java-6.0.6.jar" | md5sum -c
+RUN curl -SLfs https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.12/mysql-connector-java-8.0.12.jar > $CATALINA_HOME/lib/mysql-connector-java-8.0.12.jar \
+ && echo "88766727e5e434ceb94315b0dae0e4b4  $CATALINA_HOME/lib/mysql-connector-java-8.0.12.jar" | md5sum -c
 
 COPY log4j.properties $CATALINA_HOME/lib/
